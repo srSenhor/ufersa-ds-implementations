@@ -1,0 +1,14 @@
+1. Criar uma simulação de comunicação entre processos usando uma topologia anel
+    - Processo P1, P2, P3 e P4 se comunicam assim: ... -> P4 -> P1 -> P2 -> P3 -> P4 -> P1 -> ...
+    - Pretende-se usar TCP e no sentido horário
+    - Deve ser possivel mandar mensagem em modo unicast e broadcast
+    - Mensagens podem ser objetos que portam tipos primitivos OU compostos
+    - Cada processo armazena as mensagens recebidas e enviadas em um log próprio
+    - Deve haver um tratamento de entradas erradas com uma mensagem de erro
+
+2. Similar ao 1, mas com uma topologia em estrela
+    - O processo P1 é o central. P2, P3 e P4 estão ligados a P1
+    - O server deve guardar uma lista das conexões com os outros processos
+    - A primeira conexão é sempre com o client do processo
+    - Se o processo for coordenador, mais conexões serão adicionadas
+
